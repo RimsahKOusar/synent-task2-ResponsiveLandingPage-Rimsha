@@ -56,3 +56,47 @@ a {
 section {
   padding: var(--section-py) var(--section-px);
 }
+/* ── REUSABLE: BUTTONS ──────────────────────────────────────
+   .btn          → base styles (shared by all buttons)
+   .btn-primary  → gradient filled, glowing CTA button
+   .btn-outline  → transparent with border, secondary action
+────────────────────────────────────────────────────────────── */
+
+/* Base — shared structure for all buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+/* Primary: gradient fill, glows on hover */
+.btn-primary {
+  background: var(--gradient);
+  color: #fff;
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);          /* lifts up slightly */
+  box-shadow: 0 8px 30px var(--accent-glow);
+}
+
+/* Outline: transparent with visible border */
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
