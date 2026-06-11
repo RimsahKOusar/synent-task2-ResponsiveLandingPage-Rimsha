@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+</head>
+<body>
+    <!--
+  sections/navbar.html
+  PURPOSE : Navigation bar markup.
+            Logo on the left, nav links in the center,
+            and a "Get Started" CTA button on the right.
+  LINKED CSS : css/navbar.css
+-->
+
+<nav>
+
+  <!-- LOGO: Brand name — the <span> gets gradient color from base.css -->
+  <!-- ✏️ CHANGE: Replace "Launch" and "Flow" with your product name -->
+  <a href="#hero" class="nav-logo">Launch<span>Flow</span></a>
+
+  <!-- CENTER NAV LINKS: Anchor links that scroll to each section -->
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#footer">Contact</a></li>
+  </ul>
+
+  <!-- RIGHT CTA: Small button that scrolls to the hero CTA -->
+  <a href="#hero" class="btn btn-primary nav-cta">Get Started</a>
+
+</nav>
+
+</body>
+</html>
