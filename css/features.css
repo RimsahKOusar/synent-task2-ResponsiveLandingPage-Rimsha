@@ -1,0 +1,118 @@
+/* ============================================================
+   features.css
+   PURPOSE : Styles for the Features section — a grid of
+             4 feature cards, each with an icon, title, and
+             description explaining what the product offers.
+   ============================================================ */
+
+
+/* ── FEATURES SECTION WRAPPER ───────────────────────────────
+   Alternate background color creates visual rhythm between
+   sections as the user scrolls.
+────────────────────────────────────────────────────────────── */
+#features {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+
+/* ── SECTION HEADER ─────────────────────────────────────────
+   Centered heading block above the card grid.
+   text-align: center keeps the badge, heading, and subtitle aligned.
+────────────────────────────────────────────────────────────── */
+.features-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.features-header h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+/* Subtitle below the heading */
+.features-header p {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 500px;
+  margin: 0 auto;       /* centers the paragraph */
+  line-height: 1.8;
+}
+
+
+/* ── FEATURES CARD GRID ─────────────────────────────────────
+   auto-fill + minmax: browser fits as many 260px columns as
+   possible per row. No media queries needed — it's automatic.
+   On mobile it becomes 1 column, on desktop it's 2 or 4.
+────────────────────────────────────────────────────────────── */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+
+/* ── FEATURE CARD ───────────────────────────────────────────
+   Each card has a dark background, rounded corners, and a
+   subtle border. On hover it lifts and the border glows blue.
+────────────────────────────────────────────────────────────── */
+.feature-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);            /* card lifts on hover */
+  border-color: rgba(79, 142, 247, 0.4);  /* blue border glow */
+  box-shadow: 0 12px 40px rgba(79, 142, 247, 0.1);
+}
+
+
+/* ── CARD ICON BOX ──────────────────────────────────────────
+   A small square with a gradient background holding the icon.
+   The gradient matches the site's primary brand colors.
+────────────────────────────────────────────────────────────── */
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+
+  /* Soft glow under the icon box */
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+
+/* ── CARD TITLE ─────────────────────────────────────────────
+   Feature name in bold, slightly larger than body text.
+────────────────────────────────────────────────────────────── */
+.feature-card h3 {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
+
+/* ── CARD DESCRIPTION ───────────────────────────────────────
+   2-3 sentences explaining what the feature does.
+────────────────────────────────────────────────────────────── */
+.feature-card p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.75;
+}

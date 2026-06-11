@@ -113,3 +113,29 @@ section {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+
+
+
+/* ── REUSABLE: SECTION BADGE ────────────────────────────────
+   Small pill-shaped label above section headings.
+   e.g. "WHY CHOOSE US", "FEATURES"
+────────────────────────────────────────────────────────────── */
+.section-badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background: var(--accent-glow);
+  border: 1px solid rgba(79, 142, 247, 0.3);
+  border-radius: 999px;            /* fully rounded pill shape */
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+}
+
+
+
+
+
