@@ -1,0 +1,91 @@
+/* ============================================================
+   navbar.css
+   PURPOSE : Styles for the fixed top navigation bar.
+             Includes logo, nav links, and a CTA button.
+             The bar stays pinned to the top as the user scrolls.
+   ============================================================ */
+
+
+/* ── NAV WRAPPER ────────────────────────────────────────────
+   position: fixed keeps the nav at the top of the screen
+   even when the user scrolls down the page.
+   backdrop-filter: blur creates a frosted-glass effect,
+   making content visible but blurred behind the nav.
+────────────────────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;    /* logo | links | button */
+  align-items: center;
+  padding: 1.2rem var(--section-px);
+  background: rgba(8, 11, 20, 0.85); /* semi-transparent dark */
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+
+/* ── LOGO ───────────────────────────────────────────────────
+   Product/brand name on the far left.
+   The span inside gets the gradient color treatment.
+────────────────────────────────────────────────────────────── */
+.nav-logo {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+/* The colored part of the logo (e.g. "Flow" in "Launch Flow") */
+.nav-logo span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* ── NAV LINKS ──────────────────────────────────────────────
+   Horizontal list of anchor links in the center of the nav.
+────────────────────────────────────────────────────────────── */
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+
+/* ── NAV CTA BUTTON ─────────────────────────────────────────
+   A small "Get Started" button on the right side of the nav.
+   Smaller padding than the hero button to fit the nav bar.
+────────────────────────────────────────────────────────────── */
+.nav-cta {
+  padding: 0.55rem 1.4rem;
+  font-size: 0.85rem;
+}
+
+
+/* ── RESPONSIVE: MOBILE ─────────────────────────────────────
+   On small screens, hide the nav links and keep only the
+   logo and the CTA button.
+────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
