@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/hero.css" />
 </head>
 <body>
     <!--
@@ -35,6 +36,70 @@
   <a href="#hero" class="btn btn-primary nav-cta">Get Started</a>
 
 </nav>
+
+<!--
+  sections/hero.html
+  PURPOSE : Hero section — the full-screen opening of the page.
+            Contains an announcement pill, headline, subtext,
+            two CTA buttons, and a social proof bar.
+  LINKED CSS : css/hero.css
+-->
+
+<!-- id="hero" is linked by nav href="#hero" -->
+<section id="hero">
+
+  <div class="hero-inner">
+
+    <!-- ANNOUNCEMENT PILL: Small clickable badge above the headline -->
+    <!-- ✏️ CHANGE: Update text to match your product announcement -->
+    <div class="hero-pill">
+      <span class="badge">New</span>
+      🎉 Version 2.0 just launched &rarr;
+    </div>
+
+    <!-- MAIN HEADLINE: The biggest, most important text on the page -->
+    <!-- ✏️ CHANGE: Write a compelling one-liner for your product -->
+    <!-- The <span class="gradient-text"> makes those words blue-to-purple -->
+    <h1 class="hero-heading">
+      Build Your Product<br>
+      <span class="gradient-text">Faster Than Ever</span>
+    </h1>
+
+    <!-- SUBTEXT: 1-2 sentences expanding on the headline -->
+    <!-- ✏️ CHANGE: Describe what your product does -->
+    <p class="hero-sub">
+      LaunchFlow gives your team the tools to design, build, and ship
+      web products in record time — without the complexity.
+    </p>
+
+    <!-- CTA BUTTONS: Two actions — primary and secondary -->
+    <!-- ✏️ CHANGE: Update button text and href links -->
+    <div class="hero-buttons">
+      <a href="#features" class="btn btn-primary">
+        Start for Free &rarr;
+      </a>
+      <a href="#features" class="btn btn-outline">
+        See How It Works
+      </a>
+    </div>
+
+    <!-- SOCIAL PROOF: Avatars + rating to build visitor trust -->
+    <!-- ✏️ CHANGE: Update number and rating text -->
+    <div class="hero-proof">
+      <!-- Stacked avatar circles (emoji stand-ins for user photos) -->
+      <div class="proof-avatars">
+        <span>😊</span>
+        <span>🙂</span>
+        <span>😎</span>
+        <span>🤩</span>
+      </div>
+      <!-- Trust text next to the avatars -->
+      <span>Trusted by <strong>2,400+</strong> teams &nbsp;⭐ 4.9/5</span>
+    </div>
+
+  </div>
+
+</section>
 
 </body>
 </html>
