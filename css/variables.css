@@ -1,0 +1,64 @@
+/* ============================================================
+   variables.css
+   PURPOSE : Defines ALL CSS custom properties (variables) used
+             across every other CSS module in this project.
+             Change a value here → it updates the entire site.
+   ============================================================ */
+
+:root {
+
+  /* ── COLOR PALETTE ─────────────────────────────────────── */
+
+  /* Page background — deep dark blue-black */
+  --bg:           #080b14;
+
+  /* Surface — slightly lighter, used for cards and alternating sections */
+  --surface:      #0f1422;
+
+  /* Card background — a touch lighter than surface */
+  --card:         #141929;
+
+  /* Border color — subtle, low-contrast lines */
+  --border:       #1e2438;
+
+  /* Primary accent — vivid electric blue */
+  --accent:       #4f8ef7;
+
+  /* Accent glow — used for shadows and glowing effects */
+  --accent-glow:  rgba(79, 142, 247, 0.25);
+
+  /* Gradient — used in hero heading and buttons */
+  --gradient:     linear-gradient(135deg, #4f8ef7 0%, #a855f7 100%);
+
+  /* Main text — bright white */
+  --text:         #f1f5fd;
+
+  /* Muted text — used for descriptions and secondary info */
+  --muted:        #7a85a3;
+
+  /* Subtle text — very light, used for labels */
+  --subtle:       #3d4a6b;
+
+
+  /* ── TYPOGRAPHY ─────────────────────────────────────────── */
+
+  /* Heading font — modern geometric, bold titles */
+  --font-head:    'Space Grotesk', sans-serif;
+
+  /* Body font — clean, very readable for paragraphs */
+  --font-body:    'Inter', sans-serif;
+
+
+  /* ── SPACING ────────────────────────────────────────────── */
+
+  /* Horizontal padding for all sections */
+  --section-px:   7%;
+
+  /* Vertical padding for all sections */
+  --section-py:   6rem;
+
+  /* Border radius for cards and buttons */
+  --radius:       12px;
+  --radius-sm:    8px;
+
+}
