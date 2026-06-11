@@ -1,0 +1,163 @@
+/* ============================================================
+   footer.css
+   PURPOSE : Styles for the page footer.
+             Contains the logo, tagline, navigation columns,
+             and a bottom copyright bar.
+   ============================================================ */
+
+
+/* ── FOOTER WRAPPER ─────────────────────────────────────────
+   Dark surface background, separated from the last section
+   by a top border.
+────────────────────────────────────────────────────────────── */
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 4rem var(--section-px) 2rem;
+}
+
+
+/* ── FOOTER MAIN GRID ───────────────────────────────────────
+   Three columns on desktop:
+   - Column 1 (2fr): Brand area — logo, tagline, socials
+   - Columns 2 & 3 (1fr each): Navigation link groups
+   On mobile this stacks into a single column.
+────────────────────────────────────────────────────────────── */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+
+/* ── BRAND COLUMN ───────────────────────────────────────────
+   Left column: logo, tagline sentence, and social icons.
+────────────────────────────────────────────────────────────── */
+.footer-brand .footer-logo {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+/* Gradient on part of the logo — matches the navbar logo */
+.footer-brand .footer-logo span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Short tagline below the logo */
+.footer-brand p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 260px;
+  margin-bottom: 1.5rem;
+}
+
+/* Social icon row */
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-socials a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.footer-socials a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+
+/* ── LINK COLUMN ────────────────────────────────────────────
+   Right two columns: grouped navigation links.
+   Each column has a heading and a list of links below.
+────────────────────────────────────────────────────────────── */
+.footer-col h4 {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-col ul a {
+  font-size: 0.88rem;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.footer-col ul a:hover {
+  color: var(--text);
+}
+
+
+/* ── BOTTOM BAR ─────────────────────────────────────────────
+   Thin row at the very bottom: copyright text on the left,
+   legal links on the right.
+   A top border separates it from the footer columns above.
+────────────────────────────────────────────────────────────── */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--text);
+}
+
+
+/* ── RESPONSIVE: MOBILE ─────────────────────────────────────
+   Stack all three footer columns vertically on small screens.
+────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

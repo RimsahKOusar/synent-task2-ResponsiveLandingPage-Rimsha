@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/features.css" />
+    <link rel="stylesheet" href="css/footer.css" />
 </head>
 <body>
     <!--
@@ -195,6 +196,96 @@
   <!-- end .features-grid -->
 
 </section>
+
+<!--
+  sections/footer.html
+  PURPOSE : Page footer with brand info, navigation columns,
+            social icons, and a copyright bottom bar.
+  LINKED CSS : css/footer.css
+-->
+
+<!-- id="footer" lets the nav "Contact" link scroll here -->
+<footer id="footer">
+
+  <!-- FOOTER MAIN GRID: brand column + two link columns -->
+  <div class="footer-grid">
+
+    <!-- ── COLUMN 1: BRAND ──────────────────────────────────
+         Logo, tagline, and social icon links.
+    ──────────────────────────────────────────────────────── -->
+    <div class="footer-brand">
+
+      <!-- Logo — matches the navbar logo style -->
+      <!-- ✏️ CHANGE: Your product name -->
+      <div class="footer-logo">Launch<span>Flow</span></div>
+
+      <!-- Tagline sentence -->
+      <!-- ✏️ CHANGE: Short description of your product -->
+      <p>
+        The all-in-one platform for modern teams to build and ship
+        web products at lightning speed.
+      </p>
+
+      <!-- Social icons: each links to a social profile -->
+      <!-- ✏️ CHANGE: Replace # with your actual profile URLs -->
+      <div class="footer-socials">
+        <a href="#" title="Twitter">𝕏</a>
+        <a href="#" title="LinkedIn">in</a>
+        <a href="#" title="GitHub">⌥</a>
+        <a href="#" title="Instagram">◎</a>
+      </div>
+
+    </div>
+
+
+    <!-- ── COLUMN 2: PRODUCT LINKS ──────────────────────────
+         Navigation links grouped under "Product".
+    ──────────────────────────────────────────────────────── -->
+    <div class="footer-col">
+      <h4>Product</h4>
+      <ul>
+        <!-- ✏️ CHANGE: Update link text and href values -->
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Changelog</a></li>
+        <li><a href="#">Roadmap</a></li>
+      </ul>
+    </div>
+
+
+    <!-- ── COLUMN 3: COMPANY LINKS ──────────────────────────
+         Navigation links grouped under "Company".
+    ──────────────────────────────────────────────────────── -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <!-- ✏️ CHANGE: Update link text and href values -->
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <!-- end .footer-grid -->
+
+
+  <!-- BOTTOM BAR: copyright on the left, legal links on the right -->
+  <div class="footer-bottom">
+
+    <!-- ✏️ CHANGE: Your product/company name -->
+    <span>&copy; 2026 LaunchFlow. All rights reserved.</span>
+
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookies</a>
+    </div>
+
+  </div>
+
+</footer>
 
 </body>
 </html>
