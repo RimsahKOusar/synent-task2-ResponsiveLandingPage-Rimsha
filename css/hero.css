@@ -1,0 +1,183 @@
+/* ============================================================
+   hero.css
+   PURPOSE : Styles for the Hero section — the full-screen
+             opening area with headline, subtext, CTA buttons,
+             and a decorative background glow effect.
+   ============================================================ */
+
+
+/* ── HERO SECTION WRAPPER ───────────────────────────────────
+   min-height: 100vh fills the full screen height.
+   padding-top: 7rem pushes content below the fixed navbar.
+   The background has a radial glow in the center for depth.
+────────────────────────────────────────────────────────────── */
+#hero {
+  min-height: 100vh;
+  padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  /* Decorative radial glow behind the content */
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 30%,
+      rgba(79, 142, 247, 0.12) 0%,
+      transparent 70%),
+    var(--bg);
+}
+
+
+/* ── HERO INNER CONTENT ─────────────────────────────────────
+   max-width keeps text lines from stretching too wide.
+   z-index: 1 ensures text sits above the background glow.
+────────────────────────────────────────────────────────────── */
+.hero-inner {
+  max-width: 780px;
+  z-index: 1;
+}
+
+
+/* ── ANNOUNCEMENT PILL ──────────────────────────────────────
+   Small clickable badge above the heading.
+   e.g. "🎉 Version 2.0 is here →"
+────────────────────────────────────────────────────────────── */
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.hero-pill:hover {
+  border-color: var(--accent);
+}
+
+/* The "new" badge inside the pill */
+.hero-pill .badge {
+  background: var(--gradient);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+/* ── MAIN HEADLINE ──────────────────────────────────────────
+   The biggest text on the page. clamp() scales it
+   automatically from mobile to desktop.
+   line-height: 1.1 tightens the line spacing for large text.
+────────────────────────────────────────────────────────────── */
+.hero-heading {
+  font-family: var(--font-head);
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+
+/* ── HERO SUBTEXT ───────────────────────────────────────────
+   1-2 sentence description below the headline.
+────────────────────────────────────────────────────────────── */
+.hero-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.8;
+}
+
+
+/* ── BUTTON ROW ─────────────────────────────────────────────
+   Two buttons side by side: primary CTA + secondary outline.
+────────────────────────────────────────────────────────────── */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;        /* wraps to next line on small screens */
+  margin-bottom: 3.5rem;
+}
+
+
+/* ── SOCIAL PROOF BAR ───────────────────────────────────────
+   Small row of user avatars + rating text below the buttons.
+   Builds trust by showing other users already on the platform.
+────────────────────────────────────────────────────────────── */
+.hero-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* Avatar stack: overlapping circles */
+.proof-avatars {
+  display: flex;
+}
+
+.proof-avatars span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  margin-left: -8px;      /* negative margin creates the overlap effect */
+  background: var(--card);
+}
+
+.proof-avatars span:first-child { margin-left: 0; }
+
+
+/* ── HERO DECORATIVE GRID ───────────────────────────────────
+   Faint dot-grid pattern overlaid on the background.
+   pointer-events: none means it never blocks clicks.
+────────────────────────────────────────────────────────────── */
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, var(--subtle) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+
+/* ── RESPONSIVE: MOBILE ─────────────────────────────────────
+   On small screens, reduce spacing and font sizes.
+────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

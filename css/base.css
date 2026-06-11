@@ -100,3 +100,16 @@ section {
   color: var(--accent);
   transform: translateY(-2px);
 }
+
+/* ── REUSABLE: GRADIENT TEXT ────────────────────────────────
+   Applies a blue-to-purple gradient to text.
+   background-clip: text clips the gradient to the text shape.
+   -webkit-text-fill-color: transparent makes the text itself
+   transparent so the gradient behind it shows through.
+────────────────────────────────────────────────────────────── */
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
